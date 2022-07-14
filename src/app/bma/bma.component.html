@@ -1,0 +1,51 @@
+
+    <h1 class="text-center">Agregar Usuario</h1>
+    <form [formGroup]="formUser" (ngSubmit)="submit(formUser)">
+        <div class="form-group">
+            <label for="nameUser">Id:</label>
+            <input type="text" class="form-control" id="nameUser"  formControlName="id" placeholder="Ingresa nombre">
+            <div *ngIf="formUser.controls['id'].invalid  && (formUser.controls['id'].dirty || formUser.controls['id'].touched)" class="mt-3 alert alert-danger">
+                Este campo es requerido.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="nameUser">Nombre:</label>
+            <input type="text" class="form-control" id="nameUser"  formControlName="name" placeholder="Ingresa nombre">
+            <div *ngIf="formUser.controls['name'].invalid  && (formUser.controls['name'].dirty || formUser.controls['name'].touched)" class="mt-3 alert alert-danger">
+                Este campo es requerido.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastnameUser">Apellido:</label>
+            <input type="text" class="form-control" id="lastnameUser" formControlName="lastname" placeholder="Ingresa apellido">
+            <div *ngIf="formUser.controls['lastname'].invalid  && (formUser.controls['lastname'].dirty || formUser.controls['lastname'].touched)" class="mt-3 alert alert-danger">
+                Este campo es requerido.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="age">Edad:</label>
+            <input type="number" class="form-control" id="age" formControlName="age" placeholder="Ingresa edad">
+            <div *ngIf="formUser.controls['age'].invalid  && (formUser.controls['age'].dirty || formUser.controls['age'].touched)" class="mt-3 alert alert-danger">
+                Este campo es requerido.
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="gener">Sexo:</label>
+            <select class="form-control"  formControlName="gener" name="gener">
+                <option value="0">Selecciona:</option>
+                <option value="M">Masculino</option>
+                <option value="F">Femanino</option>
+            </select>    
+            <div *ngIf="formUser.controls['gener'].invalid  && (formUser.controls['gener'].dirty || formUser.controls['gener'].touched)"class="mt-3 alert alert-danger">
+                Este campo es requerido.
+            </div>    
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" formControlName="email"id="email"  placeholder="Ingresa tu email">
+            <div *ngIf="formUser.controls['email'].invalid  && (formUser.controls['email'].dirty || formUser.controls['email'].touched)" class="mt-3 alert alert-danger">
+                Este campo es requerido.
+            </div>
+        </div>
+        <button type="submit" [disabled]="formUser.invalid" class="mt-3 btn btn-success">Send</button>
+    </form>
