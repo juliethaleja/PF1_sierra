@@ -10,6 +10,7 @@ import { SlidebarComponent } from './slidebar/slidebar.component';
 import { ListComponent } from './list/list.component';
 import { BmaComponent } from './bma/bma.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NewUserComponent } from './new-user/new-user.component';
 
 
 
@@ -19,7 +20,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ToolbarComponent,
     SlidebarComponent,
     ListComponent,
-    BmaComponent
+    BmaComponent,
+    NewUserComponent
   ],
   imports: [
     BrowserModule,

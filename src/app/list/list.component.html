@@ -1,1 +1,24 @@
 
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Last</th>
+        <th scope="col">Age</th>
+        <th scope="col">Gener</th>
+        <th scope="col">Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of ListUser">
+        <th>{{user.id}}</th>
+        <td>{{user.name }}</td>
+        <td>{{user.lastname}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.gener}}</td>
+        <td>{{user.email}}</td>
+      </tr>
+
+    </tbody>
+  </table>
